@@ -38,7 +38,7 @@ public class fitterScript : MonoBehaviour {
             float y = Mathf.Abs(amplitudeY * Mathf.Sin(omegaY * i * a));
             buttons[i].transform.position = new Vector2(y,  heightpos);
             buttons[i].transform.localScale = new Vector2(widthOfScreen / 200, widthOfScreen / 200);
-            Text btnText = buttons[i].transform.FindChild("Text").GetComponent<Text>();
+            Text btnText = buttons[i].transform.Find("Text").GetComponent<Text>();
             btnText.text = "";
             heightpos -= widthOfScreen / 5;
         }
